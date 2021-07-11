@@ -4,7 +4,9 @@ An Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buye
 
 ## SupplyChain contract
 
-<a href="https://rinkeby.etherscan.io/address/0x39699967A77e89ec6F676648B22f12088Db06da2">Click here</a> to view the SupplyChain contract on etherscan
+<a href="https://rinkeby.etherscan.io/address/0xB8eB51696C71DB081909908fcFC36C17C65B2c64">Click here</a> to view the SupplyChain contract on etherscan
+
+The contract <a href="https://rinkeby.etherscan.io/address/0xB8eB51696C71DB081909908fcFC36C17C65B2c64#code">code</a> has been verified and it is visible on `rinkeby.etherscan.io`
 
 ## The DApp User Interface
 
@@ -85,6 +87,10 @@ truffle migrate --reset --network rinkeby
 
 ![truffle test](screenshots/truffle_migrate.jpg)
 
+#### Verify the code for the smart contract using Etherscan API through the command
+
+`truffle run verify SupplyChain --network rinkeby --license MIT`
+
 #### Test smart contracts:
 
 ```
@@ -116,6 +122,8 @@ npm run dev
 - **web3** - To interact with the deployed smart contract either on Ganache or Rinkeby test network
 - **mocha & chai** - To test the smart contracts written in solidity
 - **lite-server** - To host the DApp on the server
+- **truffle-plugin-verify** - To verify the smart contract code on Etherscan using its API
+- **Etherscan** - View and keep track of transactions happening around a smart contract as well as view its code, read and write stuff to it
 - **Remix** - To compile, deploy and test smart contracts on the Javascript VM
 - **Metamask** - Ethereum wallet which is connected to the DApp
 - **Infura** - For getting the API endpoint to connect to the Etherem network without having to run a full node
@@ -130,8 +138,8 @@ Make sure IPFS-cli is installed
 
 `ipfs add -r Product-Supply-Chain`
 
-Now the whole project can be view using this <a href="https://ipfs.io/ipfs/QmPyFrunbqj6phRjcggeVUeZLkKeK5695Sw4h3awFDBPet">link</a>
-The IPFS hash used to store the project folder is QmPyFrunbqj6phRjcggeVUeZLkKeK5695Sw4h3awFDBPet
+Now the whole project can be view using this <a href="https://ipfs.io/ipfs/QmcFzmx6j7QYvSEuSXUSZrdVR5tcU6p1NWwk9HS93vW9k4">link</a>
+The IPFS hash used to store the project folder is QmcFzmx6j7QYvSEuSXUSZrdVR5tcU6p1NWwk9HS93vW9k4
 
 ##### To publish the DApp to incorporate changes to be viewed using the same hash, the commands used are
 
@@ -139,9 +147,9 @@ The IPFS hash used to store the project folder is QmPyFrunbqj6phRjcggeVUeZLkKeK5
 
 In an different terminal window, execute the following command to publish
 
-`ipfs name publish QmPyFrunbqj6phRjcggeVUeZLkKeK5695Sw4h3awFDBPet`
+`ipfs name publish QmcFzmx6j7QYvSEuSXUSZrdVR5tcU6p1NWwk9HS93vW9k4`
 
-Use https://gateway.ipfs.io/ipfs/QmRE7NhPk8Db9uNvicKkvy74EuHm9Xkh3JFXspioiCkUiW to see the published project on IPFS
+Use https://gateway.ipfs.io/ipfs/QmcFzmx6j7QYvSEuSXUSZrdVR5tcU6p1NWwk9HS93vW9k4 to see the published project on IPFS
 
 ### Additional details
 
@@ -149,28 +157,28 @@ The `transaction hash` and `contract address` for the smart contracts deployed t
 
 ##### FarmerRole.sol
 
-- **transaction hash** - 0x47f087866be87e3f5e5232e524fe8102d7dbf0d4e87d0fc68b590b9b4b424ee2
-- **contract address** - 0xc3b959344E0938Fd4B7eF71bf085fd00c43DF4aC
+- **transaction hash** - 0x92105d3ff48a8a63e16e7f694f2989d00218f85a4f922c215eed68d7237aaab0
+- **contract address** - 0xA6bde78Ed2D8eF4d82425e481fb4094B1Cd3C462
 
 ##### DistributorRole.sol
 
-- **transaction hash** - 0x346f8b664014de749cb068402099817a09ee576fcb7a6693d2db0a2af9c1720a
-- **contract address** - 0x12659187f515EA55f3F37Ae8B894aA5D37853e77
+- **transaction hash** - 0xf903b17cf938ce45cf4e66914cdb4f376f4bd21c3f74d2341fd15ab67e6a292c
+- **contract address** - 0x01dAE76C3AF54F77D9bf1d51437f4b82dF4dD7D1
 
 ##### RetailerRole.sol
 
-- **transaction hash** - 0x89aabdbdd0a01ef27d536f938bbc99cb824fb237ee5a03bab883218579bc9d92
-- **contract address** - 0x36175e8E9707FB14276a43cFA427EC979F5BF85d
+- **transaction hash** - 0xff73bc83785f384acb2e03078fe17eadb94279ca41f303dd7edab7533ca8f16a
+- **contract address** - 0xD451de7349c89674C8043f32b858Ec072E22D131
 
 ##### ConsumerRole.sol
 
-- **transaction hash** - 0xa419d6378791e2f3cb2f68f32d5a449844f4a9683e1ac6bc6e8f14ceda1055e4
-- **contract address** - 0xbe969002136306777736D05923268A34ef3AFe7C
+- **transaction hash** - 0xebbf29e0a7cc09fecd98ba8bcc442e7eaeff3125e8fb21992322c71208aad643
+- **contract address** - 0x6d17CdcaeB9c49Bda9810dD4C8e8DF6F21893C84
 
 ##### SupplyChain.sol
 
-- **transaction hash** - 0x1a7c910e8675c97f3dbc348b5e42ecdb2b655c534e66f23b81a7f9df077d093b
-- **contract address** - 0x39699967A77e89ec6F676648B22f12088Db06da2
+- **transaction hash** - 0x77f39a47869690c5534704f10141d1860e166c570ddaafde78c19703a69d3e61
+- **contract address** - 0xB8eB51696C71DB081909908fcFC36C17C65B2c64
 
 ### Some versions of Frameworks and Libraries used in this project are
 
@@ -184,16 +192,16 @@ The `transaction hash` and `contract address` for the smart contracts deployed t
 
 A product has been tracked through the supply chain and these transactions can be viewed on <a href="https://rinkeby.etherscan.io/">rinkeby.etherscan.io</a>
 
-The Transaction hashes are
+The Transactio hashes are
 
-- **Harvested** - 0x39804614f7166254315d2a8c419ecec42138aa565bc86b8e5b1f0f402d3821c0
-- **Processed** - 0xf1165918be24297b7608bda6ba07a97a26e8455e8a83f5d915b9a5e6b04e7c32
-- **Packed** - 0xf26eed8cc3c09150fb95f17f4302154f04581104fe51bbb1eebddd302406dd7a
-- **ForSale** - 0xc71c1a414f7ea5396f0bc208bf578c9312f29c3c62103fa5b2576266509ea617
-- **Sold** - 0xa2f09593f92c9ad60d5e43a04a5169a3ddadd19aaf6279fe5f5ef6ced08d6e31
-- **Shipped** - 0x02c8c1dc6a9b7bfc3e7c158282a885f80781334c043a918e021f44b04c7c37da
-- **Received** - 0xf956d27c4d964e9681be3d821c1d50e8186cad80c21085efbd79d37cc1548ea2
-- **Purchased** - 0x64d1b162cda79fad3fc74768e171322adb32f86cacf13be580100dd9616fce2f
+- **Harvested** - 0x92a3a10b852ab26efb94088f1c3a9212211ab978f37e03ac37fcc9b6af715466
+- **Processed** - 0x368eb35fac9807c16b4d3bad77ec9d72f34ae56c384fe84ae1193bee03e73b0d
+- **Packed** - 0x50c3c0b5fa691d955c1e4eafd94ac91082d66d5e353b837378b4b5a902245009
+- **ForSale** - 0x50bb804da55f9cc3adf53dfc1cb640aaf6deb30ded7799629c085ec5a1f9a998
+- **Sold** - 0xdb99ffd9f6d2ac59f6fccd2349e9a3f0dbfcb262c0f1d0ccf3ddf61797338374
+- **Shipped** - 0x94e0465d803053ce0d0811891cba91c08cfc0701a6ac83dc7a6fc65309114c06
+- **Received** - 0x2da6ce670bff2cec745e919c0b61e08ec983a8d24564dea0f4f4526d8cbf8710
+- **Purchased** - 0x25ea83867bfce70a3ea296b448aca4db1b836eb2bccff2ab93711419ee57d3c8
 
 ## UML Diagrams for Coffee Supply Chain
 

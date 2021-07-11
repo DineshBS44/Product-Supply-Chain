@@ -1,18 +1,18 @@
 {
   "contractName": "Roles",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for managing addresses assigned to a Role.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Roles\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/E/nd1309-Project-6b-Example-Template/supply-chain/contracts/coffeeaccesscontrol/Roles.sol\":\"Roles\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/nd1309-Project-6b-Example-Template/supply-chain/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x702ce47ea4de01e5528a0cbab08a0ca0d9e2c8090a21ca195c1b7ec422d9daaa\",\"urls\":[\"bzz-raw://324409ad9b40a8712308a73585a751bf15d5873a2f3ee1487fbfe94eeb8b1b0f\",\"dweb:/ipfs/QmSDHCrFf7DvwbUyBHhbzSmasBPXmsCwHPetULXB5YgBaC\"]}},\"version\":1}",
-  "bytecode": "0x60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220bd11c9e5b90a5f1f9978168a4c5525ce05aee954efb564d019e262b45f53d0bd64736f6c63430008060033",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220bd11c9e5b90a5f1f9978168a4c5525ce05aee954efb564d019e262b45f53d0bd64736f6c63430008060033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for managing addresses assigned to a Role.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Roles\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/E/Product-Supply-Chain/supply-chain/contracts/coffeeaccesscontrol/Roles.sol\":\"Roles\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/Product-Supply-Chain/supply-chain/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x702ce47ea4de01e5528a0cbab08a0ca0d9e2c8090a21ca195c1b7ec422d9daaa\",\"urls\":[\"bzz-raw://324409ad9b40a8712308a73585a751bf15d5873a2f3ee1487fbfe94eeb8b1b0f\",\"dweb:/ipfs/QmSDHCrFf7DvwbUyBHhbzSmasBPXmsCwHPetULXB5YgBaC\"]}},\"version\":1}",
+  "bytecode": "0x60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c76aa699270dfb863998d121d8dd4d3a09f52d1d9780114ea8a2746f669167bf64736f6c63430008060033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c76aa699270dfb863998d121d8dd4d3a09f52d1d9780114ea8a2746f669167bf64736f6c63430008060033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
   "sourceMap": "114:821:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "114:821:0:-:0;;;;;;;;",
   "source": "pragma solidity ^0.8.6;\r\n\r\n/**\r\n * @title Roles\r\n * @dev Library for managing addresses assigned to a Role.\r\n */\r\nlibrary Roles {\r\n  struct Role {\r\n    mapping (address => bool) bearer;\r\n  }\r\n\r\n  /**\r\n   * @dev give an account access to this role\r\n   */\r\n  function add(Role storage role, address account) internal {\r\n    require(account != address(0));\r\n    require(!has(role, account));\r\n\r\n    role.bearer[account] = true;\r\n  }\r\n\r\n  /**\r\n   * @dev remove an account's access to this role\r\n   */\r\n  function remove(Role storage role, address account) internal {\r\n    require(account != address(0));\r\n    require(has(role, account));\r\n\r\n    role.bearer[account] = false;\r\n  }\r\n\r\n  /**\r\n   * @dev check if an account has this role\r\n   * @return bool\r\n   */\r\n  function has(Role storage role, address account)\r\n    internal\r\n    view\r\n    returns (bool)\r\n  {\r\n    require(account != address(0));\r\n    return role.bearer[account];\r\n  }\r\n}",
-  "sourcePath": "E:/nd1309-Project-6b-Example-Template/supply-chain/contracts/coffeeaccesscontrol/Roles.sol",
+  "sourcePath": "E:/Product-Supply-Chain/supply-chain/contracts/coffeeaccesscontrol/Roles.sol",
   "ast": {
-    "absolutePath": "/E/nd1309-Project-6b-Example-Template/supply-chain/contracts/coffeeaccesscontrol/Roles.sol",
+    "absolutePath": "/E/Product-Supply-Chain/supply-chain/contracts/coffeeaccesscontrol/Roles.sol",
     "exportedSymbols": {
       "Roles": [
         103
@@ -1318,7 +1318,7 @@
     "src": "0:935:0"
   },
   "legacyAST": {
-    "absolutePath": "/E/nd1309-Project-6b-Example-Template/supply-chain/contracts/coffeeaccesscontrol/Roles.sol",
+    "absolutePath": "/E/Product-Supply-Chain/supply-chain/contracts/coffeeaccesscontrol/Roles.sol",
     "exportedSymbols": {
       "Roles": [
         103
@@ -2629,7 +2629,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-11T17:55:08.886Z",
+  "updatedAt": "2021-07-11T21:24:33.736Z",
   "devdoc": {
     "details": "Library for managing addresses assigned to a Role.",
     "kind": "dev",
