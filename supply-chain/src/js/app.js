@@ -114,6 +114,9 @@ App = {
       App.fetchEvents();
     });
 
+    console.log("The contracts are ");
+    console.log(App.contracts);
+
     return App.bindEvents();
   },
 
@@ -166,9 +169,15 @@ App = {
   harvestItem: function (event) {
     event.preventDefault();
     var processId = parseInt($(event.target).data("id"));
+    App.upc = $("#upc-farm").val();
+    const originFarmID = $("#originFarmerID").val();
+
+    console.log("address is " + App.metamaskAccountID, App.upc);
 
     App.contracts.SupplyChain.deployed()
       .then(function (instance) {
+        console.log("this is executed");
+        console.log(instance);
         return instance.harvestItem(
           App.upc,
           App.metamaskAccountID,
@@ -176,7 +185,10 @@ App = {
           App.originFarmInformation,
           App.originFarmLatitude,
           App.originFarmLongitude,
-          App.productNotes
+          App.productNotes,
+          {
+            from: App.metamaskAccountID,
+          }
         );
       })
       .then(function (result) {
