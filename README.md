@@ -195,6 +195,16 @@ The Transaction hashes are
 - **Received** - 0xf956d27c4d964e9681be3d821c1d50e8186cad80c21085efbd79d37cc1548ea2
 - **Purchased** - 0x64d1b162cda79fad3fc74768e171322adb32f86cacf13be580100dd9616fce2f
 
+## UML Diagrams for Coffee Supply Chain
+
+![truffle test](screenshots/activity_diagram.jpg)
+
+![truffle test](screenshots/sequence_diagram.jpg)
+
+![truffle test](screenshots/state_chart_diagram.jpg)
+
+![truffle test](screenshots/class_diagram.jpg)
+
 ## Developer
 
 <table>
