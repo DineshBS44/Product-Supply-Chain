@@ -122,6 +122,27 @@ npm run dev
 - **IPFS** - To make the DApp completely decentralized, the DApp and all its files are hosted to IPFS
 - **Truffle** - Framework used to write, compile, test and deploy smart contracts with ease along with the frontend of the DApp.
 
+## Commands in IPFS to host the project to IPFS
+
+Make sure IPFS-cli is installed
+
+##### Add all the files to IPFS using the command
+
+`ipfs add -r Product-Supply-Chain`
+
+Now the whole project can be view using this <a href="https://ipfs.io/ipfs/QmPyFrunbqj6phRjcggeVUeZLkKeK5695Sw4h3awFDBPet">link</a>
+The IPFS hash used to store the project folder is QmPyFrunbqj6phRjcggeVUeZLkKeK5695Sw4h3awFDBPet
+
+##### To publish the DApp to incorporate changes to be viewed using the same hash, the commands used are
+
+`ipfs daemon`
+
+In an different terminal window, execute the following command to publish
+
+`ipfs name publish QmPyFrunbqj6phRjcggeVUeZLkKeK5695Sw4h3awFDBPet`
+
+Use https://gateway.ipfs.io/ipfs/QmRE7NhPk8Db9uNvicKkvy74EuHm9Xkh3JFXspioiCkUiW to see the published project on IPFS
+
 ### Additional details
 
 The `transaction hash` and `contract address` for the smart contracts deployed to the Rinkeby Test Network are
